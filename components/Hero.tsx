@@ -1,9 +1,12 @@
 import Image from "next/image";
 import hero from "@/public/images/hero.png";
 import console from "@/public/images/console.png";
-import drinks from "@/public/images/drinks.png";
+import heroBottom from "@/public/images/heroBottom.png";
 import camera from "@/public/images/camera.png";
 import logo from "@/public/images/logo.png";
+import heroText from "@/public/images/heroText.png";
+import drinks from "@/public/images/drinks.png";
+import art from "@/public/images/art.png";
 
 const Hero = () => {
   // Deep, exaggerated wave loops with sharper upward peaks
@@ -45,154 +48,43 @@ const Hero = () => {
           height={350}
           className="absolute z-50 top-0 -left-50 md:-left-40 lg:-left-20"
         />
+        <Image
+          src={heroText}
+          alt="hero-text"
+          width={600}
+          height={600}
+          className="absolute z-50 w-[500px] h-[400px] lg:h-[500px]"
+        />
+        <span className="absolute mt-32 translate-x-40 md:translate-x-50 rotate-30 z-50 text-sm bg-red-400 rounded-[8px] py-1 px-2 tracking-wider font-semibold text-white">
+          1.0
+        </span>
 
-        {/* Main Text Graphic */}
-        <div className="absolute top-16 z-50 flex w-full max-w-xl justify-center px-4 md:top-20">
-          <svg
-            viewBox="0 0 500 520"
-            role="img"
-            aria-label="Uprix Hangout"
-            className="h-auto w-full select-none drop-shadow-[0_15px_0_rgba(0,0,0,0.25)]"
-          >
-            <defs>
-              <path id="path-presenting" d="M 120 70 Q 250 35 380 70" />
-              <path id="path-uprix" d="M 70 160 Q 250 120 430 160" />
-              <path id="path-hang" d="M 80 270 Q 250 230 420 270" />
-              <path id="path-out" d="M 90 380 Q 250 340 410 380" />
-
-              <pattern
-                id="dots"
-                x="0"
-                y="0"
-                width="10"
-                height="10"
-                patternUnits="userSpaceOnUse"
-              >
-                <circle cx="3" cy="3" r="1.5" fill="#111" opacity="0.18" />
-              </pattern>
-            </defs>
-
-            {/* LAYER 1: HEAVY BLACK OUTLINE BACKDROP */}
-            <g
-              fill="none"
-              stroke="#0A0A0A"
-              strokeWidth="54"
-              strokeLinejoin="round"
-              strokeLinecap="round"
-              className="font-black uppercase"
-              style={{ fontFamily: "'Arial Black', Impact, sans-serif" }}
-            >
-              <text fontSize="20">
-                <textPath
-                  href="#path-presenting"
-                  startOffset="50%"
-                  textAnchor="middle"
-                >
-                  PRESENTING
-                </textPath>
-              </text>
-              <text fontSize="105">
-                <textPath
-                  href="#path-uprix"
-                  startOffset="50%"
-                  textAnchor="middle"
-                >
-                  UPRIX
-                </textPath>
-              </text>
-              <text fontSize="120">
-                <textPath
-                  href="#path-hang"
-                  startOffset="50%"
-                  textAnchor="middle"
-                >
-                  HANG
-                </textPath>
-              </text>
-              <text fontSize="120">
-                <textPath
-                  href="#path-out"
-                  startOffset="50%"
-                  textAnchor="middle"
-                >
-                  OUT
-                </textPath>
-              </text>
-            </g>
-
-            {/* LAYER 2: GREEN PRESENTING BANNER */}
-            <path
-              d="M 130 60 Q 250 30 370 60"
-              fill="none"
-              stroke="#0A0A0A"
-              strokeWidth="32"
-              strokeLinecap="round"
-            />
-            <text
-              fill="#FFF"
-              fontSize="18"
-              fontWeight="900"
-              style={{ fontFamily: "'Arial Black', sans-serif" }}
-            >
-              <textPath
-                href="#path-presenting"
-                startOffset="50%"
-                textAnchor="middle"
-              >
-                PRESENTING
-              </textPath>
-            </text>
-
-            {/* LAYER 3: MAIN TEXT FILLS */}
-            <g
-              className="font-black uppercase"
-              style={{ fontFamily: "'Arial Black', Impact, sans-serif" }}
-            >
-              <text fontSize="105" fill="#FFFFFF">
-                <textPath
-                  href="#path-uprix"
-                  startOffset="50%"
-                  textAnchor="middle"
-                >
-                  UPRIX
-                </textPath>
-              </text>
-              <text fontSize="120" fill="#EAB308">
-                <textPath
-                  href="#path-hang"
-                  startOffset="50%"
-                  textAnchor="middle"
-                >
-                  HANG
-                </textPath>
-              </text>
-              <text fontSize="120" fill="url(#dots)">
-                <textPath
-                  href="#path-hang"
-                  startOffset="50%"
-                  textAnchor="middle"
-                >
-                  HANG
-                </textPath>
-              </text>
-              <text fontSize="120" fill="#FFFFFF">
-                <textPath
-                  href="#path-out"
-                  startOffset="50%"
-                  textAnchor="middle"
-                >
-                  OUT
-                </textPath>
-              </text>
-            </g>
-          </svg>
+        <div className="absolute bottom-50 lg:bottom-120 left-0 lg:left-5 w-full z-20 pointer-events-none translate-y-[99%] overflow-hidden">
+          <Image
+            src={heroBottom}
+            alt="drinks and more"
+            width={1000}
+            height={400}
+            className="mx-auto"
+          />
         </div>
-        <div className="absolute bottom-45 lg:bottom-120 left-0 lg:left-5 w-full z-20 pointer-events-none translate-y-[99%] overflow-hidden">
-          <Image src={drinks} alt="drinks" width={1200} height={400} />
-        </div>
+        <Image
+          src={drinks}
+          alt="drinks"
+          width={200}
+          height={200}
+          className="absolute -left-5 md:left-2 max-sm:bottom-20 md:top-80 z-30"
+        />
+        <Image
+          src={art}
+          alt="art"
+          width={200}
+          height={200}
+          className="absolute -right-5 md:right-2 max-sm:bottom-20 md:top-80 z-30"
+        />
         <div className="z-50 flex flex-col gap-2 items-center justify-center -mt-8">
           {" "}
-          <button className="bg-red-600 py-2 px-4 font-embrace text-xs shadow-lg shadow-red-800 rounded-[24px] cursor-pointer duration-500 transition hover:bg-red-700">
+          <button className="bg-blue-600 py-2 px-4 font-embrace text-xs shadow-lg shadow-blue-800 rounded-[24px] cursor-pointer duration-500 transition hover:bg-blue-700">
             Get your Tickets
           </button>
           <p className="ml-4 font-semibold text-xs bg-black px-4 py-2 rounded-full">
