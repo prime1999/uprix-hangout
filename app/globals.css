@@ -89,6 +89,12 @@
   --hero-bg-dark: #010103;
   --hero-bg-mid: rgb(4, 21, 50);
   --hero-accent: #ffb84d;
+  --page-gradient: linear-gradient(
+    160deg,
+    #e5d81d 0%,
+    #fffdf0 42%,
+    #dce8ff 100%
+  );
 }
 
 .dark {
@@ -136,10 +142,9 @@
 
   html {
     scroll-behavior: smooth;
-    background-color: var(--hero-bg-dark);
+    background: var(--page-gradient);
     background-attachment: fixed;
     color: #f3f4f6;
-    scroll-behavior: smooth;
     overflow-x: hidden;
   }
 
@@ -147,8 +152,10 @@
     @apply bg-background text-foreground;
     font-family: var(--font-body), sans-serif;
     min-height: 100vh;
-    /* Universal subtle grid background for the entire body */
+    overflow: hidden;
+    background-color: transparent;
     background-image:
+      var(--page-gradient),
       linear-gradient(
         to right,
         rgba(255, 255, 255, 0.019) 1px,
@@ -159,8 +166,14 @@
         rgba(255, 255, 255, 0.019) 1px,
         transparent 1px
       );
-    background-size: 56px 56px;
-    background-position: center top;
+    background-size:
+      cover,
+      56px 56px,
+      56px 56px;
+    background-position:
+      center top,
+      center top,
+      center top;
     overflow-x: hidden;
   }
 
