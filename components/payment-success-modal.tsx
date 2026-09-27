@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
 import {
   Dialog,
@@ -22,6 +23,10 @@ import {
   Ticket,
   Sparkles,
 } from "lucide-react";
+import food from "@/public/images/food.png";
+import drinks from "@/public/images/drinks.png";
+import fun from "@/public/images/fun.png";
+import games from "@/public/images/games.png";
 
 interface Registration {
   id: string;
@@ -291,63 +296,28 @@ export function PaymentSuccessModal() {
                 </div>
 
                 {/* Email Confirmation Ticket Entry Notice */}
-                <div className="rounded-2xl border-2 border-dashed border-amber-400 bg-amber-50 p-3.5 mb-5 text-left flex items-start gap-3">
-                  <div className="p-2 bg-amber-400 rounded-xl text-slate-900 shrink-0 border border-slate-900 mt-0.5">
-                    <Mail className="w-4 h-4 stroke-[2.5]" />
-                  </div>
+                <div className="rounded-2xl p-3.5 mb-5 text-left flex items-start gap-3">
                   <div>
-                    <p className="text-xs font-black text-amber-950">
-                      Confirmation Sent to Email!
-                    </p>
-                    <p className="text-[11px] font-semibold text-amber-900 leading-tight mt-0.5">
-                      Your ticket details have been generated. Please show the
-                      email sent to{" "}
-                      <span className="font-black underline">
-                        {registration.email}
-                      </span>{" "}
-                      at the gate as your official pass.
+                    <p className="text-center text-[13px] font-semibold text-amber-900 leading-tight mt-0.5">
+                      Your ticket details has been sent to your email. Please
+                      show the ticket at the gate as your official pass.
                     </p>
                   </div>
                 </div>
 
                 {/* Playful Event Badges */}
-                <div className="grid grid-cols-4 gap-2 mb-6">
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 bg-yellow-400 rounded-2xl flex items-center justify-center border-2 border-slate-900 rotate-[-2deg] text-base">
-                      🍕
-                    </div>
-                    <span className="text-[10px] font-black uppercase mt-1 text-slate-700">
-                      Food
-                    </span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 bg-blue-500 rounded-2xl flex items-center justify-center text-white border-2 border-slate-900 rotate-[3deg] text-base">
-                      🎮
-                    </div>
-                    <span className="text-[10px] font-black uppercase mt-1 text-slate-700">
-                      Games
-                    </span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 bg-pink-500 rounded-2xl flex items-center justify-center text-white border-2 border-slate-900 rotate-[-3deg] text-base">
-                      🎨
-                    </div>
-                    <span className="text-[10px] font-black uppercase mt-1 text-slate-700">
-                      Art
-                    </span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 bg-emerald-500 rounded-2xl flex items-center justify-center text-white border-2 border-slate-900 rotate-[2deg] text-base">
-                      🎵
-                    </div>
-                    <span className="text-[10px] font-black uppercase mt-1 text-slate-700">
-                      Fun
-                    </span>
-                  </div>
+                <div className="flex items-center justify-center gap-4 mb-6">
+                  <Image src={food} alt="Food" width={50} height={50} />
+
+                  <Image src={drinks} alt="Drinks" width={50} height={50} />
+
+                  <Image src={fun} alt="Fun" width={50} height={50} />
+
+                  <Image src={games} alt="Games" width={50} height={50} />
                 </div>
 
                 {/* Continue Action */}
-                <DialogClose className="w-full py-4 bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-500 text-slate-950 font-black text-base rounded-2xl shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] border-2 border-slate-950 transition-all flex items-center justify-center gap-2 group cursor-pointer active:translate-x-0.5 active:translate-y-0.5">
+                <DialogClose className="w-full py-4 mb-4 bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-500 text-slate-950 font-black text-base rounded-2xl shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] border-2 border-slate-950 transition-all flex items-center justify-center gap-2 group cursor-pointer active:translate-x-0.5 active:translate-y-0.5">
                   <span>CONTINUE TO HOME</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform stroke-[3]" />
                 </DialogClose>
