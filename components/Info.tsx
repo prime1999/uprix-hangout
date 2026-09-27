@@ -1,5 +1,6 @@
 import Image from "next/image";
 import details from "@/public/images/details.png";
+import CallToAction from "@/components/CallToAction";
 
 const STYLES = `
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Permanent+Marker&display=swap');
@@ -141,9 +142,9 @@ const Info = () => {
             to chill, compete, create or just vibe — there will be something for
             you.
           </p>
-          <button className="bg-yellow-300 text-xs sm:text-sm rounded-full px-5 py-2.5 text-black font-semibold mt-4 sm:mt-5 cursor-pointer duration-300 transition hover:bg-yellow-400 active:scale-95 shadow-md">
+          <CallToAction className="bg-yellow-300 text-xs sm:text-sm px-5 py-2.5 mt-4 sm:mt-5">
             Save your spot
-          </button>
+          </CallToAction>
         </div>
 
         {/* 3. right: doodle event details (Desktop position inside background) */}

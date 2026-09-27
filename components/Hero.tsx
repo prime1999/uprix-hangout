@@ -7,6 +7,7 @@ import logo from "@/public/images/logo.png";
 import heroText from "@/public/images/heroText.png";
 import drinks from "@/public/images/drinks.png";
 import fun from "@/public/images/fun.png";
+import CallToAction from "@/components/CallToAction";
 
 const Hero = () => {
   // Deep, exaggerated wave loops with sharper upward peaks
@@ -84,9 +85,9 @@ const Hero = () => {
         />
         <div className="z-50 flex flex-col gap-2 items-center justify-center -mt-8">
           {" "}
-          <button className="bg-blue-600 py-3 px-6 font-embrace text-xs shadow-lg shadow-blue-800 rounded-[24px] cursor-pointer duration-500 transition hover:bg-blue-700">
+          <CallToAction variant="hero" type="button">
             Get your Tickets
-          </button>
+          </CallToAction>
           <p className="font-semibold text-xs bg-black px-4 py-2 rounded-full">
             Come have fun while networking.
           </p>

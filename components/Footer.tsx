@@ -1,5 +1,6 @@
 import footer from "@/public/images/footer.png";
 import Link from "next/link";
+import CallToAction from "@/components/CallToAction";
 
 function Crown() {
   return (
@@ -81,9 +82,9 @@ const Footer = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="bg-yellow-300 text-xs sm:text-base rounded-full px-3.5 py-1.5 sm:px-5 sm:py-2.5 text-black font-semibold mt-3 sm:mt-5 cursor-pointer duration-300 transition hover:bg-yellow-400 active:scale-95 shadow-md">
+        <CallToAction className="bg-yellow-300 text-xs sm:text-base px-3.5 py-1.5 sm:px-5 sm:py-2.5 mt-3 sm:mt-5">
           Save your spot
-        </button>
+        </CallToAction>
 
         {/* Developer Attribution */}
         <div className="flex items-center justify-center gap-1 mt-4 sm:mt-10 text-[10px] sm:text-xs text-neutral-300">
