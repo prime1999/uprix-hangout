@@ -35,7 +35,7 @@ const members = [
     name: "Taifaq",
     title: "Brand Identity Designer",
     avatar: taifaq.src,
-    seat: "JCR-A01",
+    seat: "JCR-A16",
   },
   {
     name: "Who 🤔??",
